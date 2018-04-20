@@ -55,20 +55,24 @@ gplus_username:  lorem_ipsum
 
 In order to compile the assets and run Jekyll on local you need to follow those steps:
 
-- Install [NodeJS](https://nodejs.org/)
+- Make sure [NodeJS](https://nodejs.org/) is installed
+- - run 'node -v' or install via Homebrew
+- - 'ruby -e $(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)' then 'brew install node'
+- Install [Gulp](https://gulpjs.com/)
+- - 'npm install gulp-cli -g' then 'npm install gulp -D'
 - Run `npm install`
 - Run `gulp`
+- If you get a '-bash: gulp: command not found' error:
+- - Run 'npm config set prefix /usr/local'
+- - Then run 'sudo npm install gulp -g'. Enter your user admin password to install gulp globally
+- - Then Run 'gulp' again
 
-## Questions
-
-Having any issues file a [GitHub Issue](https://github.com/nrandecker/particle/issues/new).
+## Customization
+To change the content on the sections of the site (about, header, projects, footer etc) edit the corresponding .html file in the 'includes' folder
+To change the overall layout of what sections are displayed, edit the default.html file in the layouts folder.
+See above for changing the user settings (what is show in the header of the site)
+The index.html page just references the default layout (leave this as is)
 
 ## License
 
 This theme is free and open source software, distributed under the The MIT License. So feel free to use this Jekyll theme anyway you want.
-
-## Credits
-
-This theme was partially designed with the inspiration from these fine folks
-- [Willian Justen](https://github.com/willianjusten/will-jekyll-template)
-- [Vincent Garreau](https://github.com/VincentGarreau/particles.js/)
